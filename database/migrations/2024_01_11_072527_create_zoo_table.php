@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('zoo', function (Blueprint $table) {
             $table->id();
-            $table->String("name",50);
-            $table->String("type",50);
+            $table->String("name",20);
+            $table->String("type",20);
             $table->Integer("cage_number");
             $table->timestamps();
         });
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('_zoo');
+        Schema::dropIfExists('zoo');
     }
 };
